@@ -2,22 +2,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-#include <Winsock2.h>
-#include <string>
-#include <iostream>
-
 #include "../../yeelink_api.hpp"
 
-
-#pragma comment(lib, "ws2_32.lib")
-
 using namespace std;
-
-
-
-
-
-
 
 int main()
 {
@@ -26,8 +13,7 @@ int main()
 	//string str = GetHTTP("api.yeelink.net", 80, "http://api.yeelink.net/v1.0/device/353097/sensor/397985/datapoints");
 
 	double d1s1 = YEELINK_API::read_lastvalue(353097, 397985);
-	cout << d1s1 << endl;
+	printf("%lf\n", d1s1);
 
-	system("pause");
 	return 0;
 }

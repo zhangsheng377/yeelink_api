@@ -1,4 +1,0 @@
-﻿  main.cpp
-c:\users\43587\desktop\code\air_monitor\display\yeelink_api\json\json.hpp(6879): warning C4003: “max”宏的实参不足
-  test.vcxproj -> C:\Users\43587\Desktop\code\air_monitor\display\yeelink_api\test\Debug\test.exe
-  test.vcxproj -> C:\Users\43587\Desktop\code\air_monitor\display\yeelink_api\test\Debug\test.pdb (Partial PDB)

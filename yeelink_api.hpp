@@ -2,6 +2,8 @@
 #define __YEELINK_API_
 
 #include <Winsock2.h>
+#pragma comment(lib,"ws2_32.lib")
+
 #include <string>
 #include <stdio.h>
 #include <iostream>
