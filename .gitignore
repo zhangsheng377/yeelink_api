@@ -1,1 +1,5 @@
 *.log
+test/test.VC.VC.opendb
+test/test.VC.db
+test/Debug/
+test/test/Debug/
