@@ -7,7 +7,7 @@
 #include <string>
 
 namespace READ_JSON_BOOST {
-	template<class T=double>
+	template<class T>
 	T read_json_child(std::string str,std::string child_name) {
 		std::stringstream ss(str);
 		boost::property_tree::ptree pt;
