@@ -23,5 +23,8 @@
     <ClInclude Include="..\..\yeelink_api.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\read_json_boost.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,7 +5,8 @@
 #include <stdio.h>
 #include <iostream>
 #include <sstream>
-#include "json\json.hpp"
+//#include "json\json.hpp"
+#include "read_json_boost.hpp"
 #include "read_url_boost.hpp"
 
 class YEELINK_API
@@ -28,7 +29,8 @@ YEELINK_API::~YEELINK_API()
 }
 
 double YEELINK_API::read_lastvalue(int device_id, int sensor_id) {
-	double result = -1.0;
+	double result = READ_JSON_BOOST::read_json_child<double>(read_lastdata(device_id, sensor_id), "value");
+	/*
 	std::string str;
 	do {
 		str = read_lastdata(device_id, sensor_id);
@@ -36,13 +38,14 @@ double YEELINK_API::read_lastvalue(int device_id, int sensor_id) {
 
 	try {
 		nlohmann::json jj = nlohmann::json::parse(str.c_str());
-		/*for (json::iterator it = j3.begin(); it != j3.end(); ++it) {
-		std::cout << it.key() << " : " << it.value() << "\n";
-		}*/
+		//for (json::iterator it = j3.begin(); it != j3.end(); ++it) {
+		//std::cout << it.key() << " : " << it.value() << "\n";
+		//}
 		result = jj["value"];
 	}
 	catch(char*){}
-	return result;
+	*/
+	return result >= 0 ? result : -1;
 }
 
 std::string YEELINK_API::read_lastdata(int device_id, int sensor_id) {
